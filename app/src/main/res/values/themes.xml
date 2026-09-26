@@ -1,8 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.NigoshaSalonApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.NigoshaSalonApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores de marca -->
+        <item name="colorPrimary">@color/nigosha_primary</item>
+        <item name="colorPrimaryVariant">@color/nigosha_primary_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/nigosha_accent</item>
+        <item name="colorSecondaryVariant">@color/nigosha_primary_variant</item>
+        <item name="colorOnSecondary">@color/nigosha_primary</item>
+        <item name="android:statusBarColor">@color/nigosha_primary</item>
     </style>
 
     <style name="Theme.NigoshaSalonApp" parent="Base.Theme.NigoshaSalonApp" />

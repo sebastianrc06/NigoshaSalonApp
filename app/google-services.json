@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "241942651916",
+    "project_id": "nigoshasalonapp",
+    "storage_bucket": "nigoshasalonapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241942651916:android:8a69d33b4895e51dac3a29",
+        "android_client_info": {
+          "package_name": "pe.uch.nigosha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXGnMy4SXJIO7Oblwfr9UTZM0fqUvjZBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
