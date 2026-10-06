@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/estadoError" android:layout_width="match_parent" android:layout_height="wrap_content" android:visibility="gone" android:orientation="vertical" android:padding="20dp" android:background="@color/nigosha_error_bg">
+    <TextView android:id="@+id/tvErrorEstado" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/nigosha_error" android:textSize="14sp" android:accessibilityLiveRegion="polite" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnReintentarEstado" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:minHeight="48dp" android:text="Reintentar" android:textAllCaps="false" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/inicioFragment" android:icon="@android:drawable/ic_menu_view" android:title="Inicio" />
+    <item android:id="@+id/catalogoFragment" android:icon="@android:drawable/ic_menu_search" android:title="Servicios" />
+    <item android:id="@+id/misCitasFragment" android:icon="@android:drawable/ic_menu_my_calendar" android:title="Mis citas" />
+    <item android:id="@+id/salonFragment" android:icon="@android:drawable/ic_menu_mapmode" android:title="El salón" />
+</menu>

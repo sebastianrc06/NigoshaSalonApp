@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <dimen name="nigosha_space_xs">4dp</dimen>
+    <dimen name="nigosha_space_sm">8dp</dimen>
+    <dimen name="nigosha_space_md">12dp</dimen>
+    <dimen name="nigosha_space_lg">16dp</dimen>
+    <dimen name="nigosha_space_xl">24dp</dimen>
+    <dimen name="nigosha_space_xxl">32dp</dimen>
+    <dimen name="nigosha_screen_padding">20dp</dimen>
+    <dimen name="nigosha_card_padding">16dp</dimen>
+    <dimen name="nigosha_card_radius">20dp</dimen>
+    <dimen name="nigosha_button_radius">14dp</dimen>
+    <dimen name="nigosha_input_radius">12dp</dimen>
+    <dimen name="nigosha_touch_target">48dp</dimen>
+    <dimen name="nigosha_button_height">56dp</dimen>
+    <dimen name="nigosha_text_heading">28sp</dimen>
+    <dimen name="nigosha_text_section">22sp</dimen>
+    <dimen name="nigosha_text_title">18sp</dimen>
+    <dimen name="nigosha_text_body">16sp</dimen>
+    <dimen name="nigosha_text_caption">13sp</dimen>
+</resources>

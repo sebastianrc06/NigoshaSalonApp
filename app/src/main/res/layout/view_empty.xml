@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/estadoVacio" android:layout_width="match_parent" android:layout_height="wrap_content" android:visibility="gone" android:orientation="vertical" android:padding="20dp" android:background="@color/nigosha_surface_soft">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tu próxima visita empieza aquí" android:textColor="@color/nigosha_text_title" android:textSize="18sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Todavía no tienes próximas citas. Explora el catálogo para elegir un servicio." android:textColor="@color/nigosha_text_body" android:textSize="14sp" />
+</LinearLayout>

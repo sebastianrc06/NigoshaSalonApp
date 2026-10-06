@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <color name="nigosha_primary">#1B4332</color>
+    <color name="nigosha_primary_variant">#10291F</color>
+    <color name="nigosha_accent">#8AD4AB</color>
+    <color name="nigosha_gold">#E4C56F</color>
+    <color name="nigosha_gold_decorative">#E4C56F</color>
+    <color name="nigosha_bg">#101813</color>
+    <color name="nigosha_surface">#19251D</color>
+    <color name="nigosha_surface_soft">#223329</color>
+    <color name="nigosha_border">#3C5042</color>
+    <color name="nigosha_text_title">#E5F1E8</color>
+    <color name="nigosha_text_body">#D0DDD3</color>
+    <color name="nigosha_text_muted">#AABCAF</color>
+    <color name="nigosha_on_brand">#FFFFFF</color>
+    <color name="nigosha_brand_caption">#B7E4C7</color>
+    <color name="nigosha_success">#9EDAAF</color>
+    <color name="nigosha_success_bg">#203B29</color>
+    <color name="nigosha_warning">#E8C779</color>
+    <color name="nigosha_warning_bg">#3B301B</color>
+    <color name="nigosha_error">#FFB4AB</color>
+    <color name="nigosha_error_bg">#482421</color>
+</resources>

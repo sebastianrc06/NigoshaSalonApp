@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/nigosha_bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnVolverDetalle" style="?attr/materialButtonOutlinedStyle" android:textColor="@color/nigosha_text_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:minHeight="56dp" android:text="‹  Mis citas" android:textAllCaps="false" app:cornerRadius="14dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Detalle de tu cita" android:textColor="@color/nigosha_text_title" android:textSize="28sp" android:textStyle="bold" />
+        <include layout="@layout/view_loading" />
+        <include layout="@layout/view_error" />
+        <LinearLayout android:id="@+id/contenidoDetalle" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <include layout="@layout/view_detalle_cita" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="" android:textColor="@color/nigosha_text_body" android:textSize="14sp" android:id="@+id/tvOperacionDetalle" android:accessibilityLiveRegion="polite" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAdelantoDetalle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:minHeight="56dp" android:text="Ver adelanto" android:textAllCaps="false" app:cornerRadius="14dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCalendarioDetalle" style="?attr/materialButtonOutlinedStyle" android:textColor="@color/nigosha_text_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:minHeight="56dp" android:text="Añadir al calendario" android:textAllCaps="false" app:cornerRadius="14dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCancelarDetalle" style="?attr/materialButtonOutlinedStyle" android:textColor="@color/nigosha_text_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:minHeight="56dp" android:text="Cancelar solicitud" android:textAllCaps="false" app:cornerRadius="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
