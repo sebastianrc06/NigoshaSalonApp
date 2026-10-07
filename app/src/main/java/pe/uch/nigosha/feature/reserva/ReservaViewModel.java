@@ -281,12 +281,18 @@ public class ReservaViewModel extends ViewModel {
   }
 
   public String getDateLabel() {
-    return selectedDay == null
-            ? "Elegir día"
-            : format(
+
+    if (selectedDay == null) {
+      return "Elegir día";
+    }
+
+    String fecha = format(
             selectedDay.getTimeInMillis(),
-            "dd/MM/yyyy"
+            "EEEE, dd 'de' MMMM"
     );
+
+    return Character.toUpperCase(fecha.charAt(0))
+            + fecha.substring(1);
   }
 
   public void selectStart(long start) {

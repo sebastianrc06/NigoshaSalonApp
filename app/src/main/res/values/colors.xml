@@ -1,25 +1,44 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Marca -->
     <color name="nigosha_primary">#1B4332</color>
     <color name="nigosha_primary_variant">#143326</color>
     <color name="nigosha_accent">#74C69D</color>
+
+    <!-- Dorados -->
     <color name="nigosha_gold">#856515</color>
     <color name="nigosha_gold_decorative">#D4AF37</color>
+
+    <!-- Fondos -->
     <color name="nigosha_bg">#F7F8F5</color>
     <color name="nigosha_surface">#FFFFFF</color>
     <color name="nigosha_surface_soft">#EDF4EF</color>
+
+    <!-- Bordes -->
     <color name="nigosha_border">#DCE5DE</color>
+
+    <!-- Textos -->
     <color name="nigosha_text_title">#183D2E</color>
     <color name="nigosha_text_body">#39483F</color>
     <color name="nigosha_text_muted">#626E66</color>
+
+    <!-- Texto sobre marca -->
     <color name="nigosha_on_brand">#FFFFFF</color>
     <color name="nigosha_brand_caption">#B7E4C7</color>
+
+    <!-- Estados -->
     <color name="nigosha_success">#236342</color>
     <color name="nigosha_success_bg">#E5F3E9</color>
+
     <color name="nigosha_warning">#805B13</color>
     <color name="nigosha_warning_bg">#FFF3D6</color>
+
     <color name="nigosha_error">#B3261E</color>
     <color name="nigosha_error_bg">#FCEAE8</color>
+
+    <!-- Básicos -->
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+
 </resources>

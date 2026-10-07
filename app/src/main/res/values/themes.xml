@@ -1,25 +1,57 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <style name="Base.Theme.NigoshaSalonApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    <style
+        name="Base.Theme.NigoshaSalonApp"
+        parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Marca -->
         <item name="colorPrimary">@color/nigosha_primary</item>
         <item name="colorPrimaryVariant">@color/nigosha_primary_variant</item>
         <item name="colorOnPrimary">@color/nigosha_on_brand</item>
+
         <item name="colorSecondary">@color/nigosha_accent</item>
         <item name="colorSecondaryVariant">@color/nigosha_primary_variant</item>
         <item name="colorOnSecondary">@color/nigosha_primary</item>
+
+        <!-- Fondo -->
         <item name="android:colorBackground">@color/nigosha_bg</item>
+        <item name="android:windowBackground">@color/nigosha_bg</item>
+
+        <!-- Superficies -->
         <item name="colorSurface">@color/nigosha_surface</item>
         <item name="colorOnSurface">@color/nigosha_text_body</item>
-        <item name="colorError">@color/nigosha_error</item>
-        <item name="android:fontFamily">sans</item>
+
+        <!-- Textos -->
         <item name="android:textColorPrimary">@color/nigosha_text_title</item>
         <item name="android:textColorSecondary">@color/nigosha_text_muted</item>
-        <item name="android:statusBarColor">@color/nigosha_primary</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:navigationBarColor">@color/nigosha_primary_variant</item>
-        <item name="android:windowBackground">@color/nigosha_bg</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/nigosha_error</item>
+
+        <!-- Fuente -->
+        <item name="android:fontFamily">sans</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/nigosha_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/nigosha_bg</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <!-- No permitir que Android fuerce modo oscuro -->
+        <item name="android:forceDarkAllowed">false</item>
+
+        <!-- Componentes Nigosha -->
         <item name="materialButtonStyle">@style/Widget.Nigosha.Button</item>
         <item name="textInputStyle">@style/Widget.Nigosha.TextInput</item>
+
     </style>
-    <style name="Theme.NigoshaSalonApp" parent="Base.Theme.NigoshaSalonApp" />
+
+    <style
+        name="Theme.NigoshaSalonApp"
+        parent="Base.Theme.NigoshaSalonApp" />
+
 </resources>

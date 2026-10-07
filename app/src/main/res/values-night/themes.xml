@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <style name="Theme.NigoshaSalonApp" parent="Base.Theme.NigoshaSalonApp">
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:statusBarColor">@color/nigosha_primary_variant</item>
-        <item name="android:navigationBarColor">@color/nigosha_bg</item>
-    </style>
-</resources>

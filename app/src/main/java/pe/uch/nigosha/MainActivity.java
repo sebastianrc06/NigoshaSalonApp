@@ -2,7 +2,9 @@ package pe.uch.nigosha;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import pe.uch.nigosha.feature.cliente.ClienteActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,7 +13,14 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    startActivity(new Intent(this, ClienteActivity.class));
+    Intent intent =
+            new Intent(
+                    this,
+                    ClienteActivity.class
+            );
+
+    startActivity(intent);
+
     finish();
   }
 }

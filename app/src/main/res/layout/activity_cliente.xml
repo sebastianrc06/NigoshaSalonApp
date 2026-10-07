@@ -1,5 +1,46 @@
-<?xml version='1.0' encoding='utf-8'?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/clienteRoot" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/nigosha_bg">
-    <androidx.fragment.app.FragmentContainerView android:id="@+id/clienteNavHost" android:name="androidx.navigation.fragment.NavHostFragment" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:defaultNavHost="true" app:navGraph="@navigation/nav_cliente" />
-    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@+id/clienteBottomNavigation" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/nigosha_surface" app:labelVisibilityMode="labeled" app:itemIconTint="@color/nigosha_navigation" app:itemTextColor="@color/nigosha_navigation" app:menu="@menu/menu_cliente_bottom" />
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/clienteRoot"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    android:background="@color/nigosha_bg">
+
+    <androidx.fragment.app.FragmentContainerView
+
+        android:id="@+id/clienteNavHost"
+
+        android:name="androidx.navigation.fragment.NavHostFragment"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_cliente" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/clienteBottomNavigation"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/nigosha_surface"
+
+        app:labelVisibilityMode="labeled"
+
+        app:itemIconTint="@color/nigosha_navigation"
+        app:itemTextColor="@color/nigosha_navigation"
+
+        app:menu="@menu/menu_cliente_bottom" />
+
 </LinearLayout>
