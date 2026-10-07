@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    android:background="@color/nigosha_bg">
+
+
+    <!-- ========================================================= -->
+    <!-- CABECERA                                                  -->
+    <!-- ========================================================= -->
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:background="@color/nigosha_primary"
+
+        android:paddingStart="24dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="26dp">
+
+
+        <!-- VOLVER -->
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/btnVolverPerfil"
+
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+
+            android:gravity="center_vertical"
+
+            android:paddingStart="0dp"
+            android:paddingEnd="16dp"
+
+            android:text="‹  Volver"
+
+            android:textAllCaps="false"
+
+            android:textColor="@android:color/white"
+
+            android:textSize="14sp"
+
+            android:backgroundTint="@android:color/transparent"
+
+            app:backgroundTint="@android:color/transparent"
+
+            app:cornerRadius="0dp"
+
+            app:elevation="0dp" />
+
+
+        <!-- ETIQUETA -->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:text="TU CUENTA"
+
+            android:textColor="@color/nigosha_gold_decorative"
+
+            android:textSize="11sp"
+
+            android:textStyle="bold"
+
+            android:letterSpacing="0.12" />
+
+
+        <!-- TÍTULO -->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:text="Mi perfil"
+
+            android:textColor="@android:color/white"
+
+            android:textSize="30sp"
+
+            android:textStyle="bold" />
+
+
+        <!-- DESCRIPCIÓN -->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="6dp"
+
+            android:text="Consulta los datos asociados a tu cuenta."
+
+            android:textColor="@color/nigosha_brand_caption"
+
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <!-- ========================================================= -->
+    <!-- CONTENIDO DESPLAZABLE                                     -->
+    <!-- ========================================================= -->
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+
+        android:fillViewport="true"
+
+        android:clipToPadding="false"
+
+        android:scrollbars="none">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:paddingStart="18dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="32dp">
+
+
+            <!-- ================================================= -->
+            <!-- PROGRESS                                         -->
+            <!-- ================================================= -->
+
+            <ProgressBar
+
+                android:id="@+id/progressPerfil"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_horizontal"
+
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+
+                android:visibility="gone" />
+
+
+            <!-- ================================================= -->
+            <!-- CONTENIDO DEL PERFIL                              -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+
+                android:id="@+id/contenidoPerfil"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:visibility="visible">
+
+
+                <!-- ============================================= -->
+                <!-- TARJETA PRINCIPAL                             -->
+                <!-- ============================================= -->
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:cardBackgroundColor="@color/nigosha_surface"
+
+                    app:cardCornerRadius="20dp"
+
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="@color/nigosha_border"
+
+                    app:strokeWidth="1dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+
+                        android:gravity="center_horizontal"
+
+                        android:paddingStart="20dp"
+                        android:paddingTop="22dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="22dp">
+
+
+                        <!-- ICONO DEL PERFIL -->
+
+                        <ImageView
+
+                            android:id="@+id/imgPerfil"
+
+                            android:layout_width="76dp"
+                            android:layout_height="76dp"
+
+                            android:contentDescription="Perfil del cliente"
+
+                            android:src="@drawable/bg_perfil_circulo"
+
+                            android:scaleType="centerInside" />
+
+
+                        <!-- NOMBRE COMPLETO -->
+
+                        <TextView
+
+                            android:id="@+id/tvPerfilNombre"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="18dp"
+
+                            android:gravity="center"
+
+                            android:text="Cliente"
+
+                            android:textColor="@color/nigosha_text_title"
+
+                            android:textSize="20sp"
+
+                            android:textStyle="bold" />
+
+
+                        <!-- ROL -->
+
+                        <TextView
+
+                            android:id="@+id/tvPerfilRol"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="8dp"
+
+                            android:text="CLIENTE"
+
+                            android:textColor="@color/nigosha_gold"
+
+                            android:textSize="11sp"
+
+                            android:textStyle="bold"
+
+                            android:letterSpacing="0.12" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- ============================================= -->
+                <!-- INFORMACIÓN PERSONAL                          -->
+                <!-- ============================================= -->
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="28dp"
+
+                    android:text="Información personal"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    android:textSize="20sp"
+
+                    android:textStyle="bold" />
+
+
+                <!-- ============================================= -->
+                <!-- TARJETA DE DATOS                              -->
+                <!-- ============================================= -->
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+
+                    app:cardBackgroundColor="@color/nigosha_surface"
+
+                    app:cardCornerRadius="18dp"
+
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="@color/nigosha_border"
+
+                    app:strokeWidth="1dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+
+                        android:paddingStart="18dp"
+                        android:paddingTop="18dp"
+                        android:paddingEnd="18dp"
+                        android:paddingBottom="18dp">
+
+
+                        <!-- DNI -->
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="DNI"
+
+                            android:textColor="@color/nigosha_text_muted"
+
+                            android:textSize="11sp" />
+
+
+                        <TextView
+
+                            android:id="@+id/tvPerfilDni"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="4dp"
+
+                            android:text="—"
+
+                            android:textColor="@color/nigosha_text_title"
+
+                            android:textSize="15sp"
+
+                            android:textStyle="bold" />
+
+
+                        <!-- SEPARADOR -->
+
+                        <View
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_marginTop="14dp"
+                            android:layout_marginBottom="14dp"
+
+                            android:background="@color/nigosha_border" />
+
+
+                        <!-- NOMBRES -->
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Nombres"
+
+                            android:textColor="@color/nigosha_text_muted"
+
+                            android:textSize="11sp" />
+
+
+                        <TextView
+
+                            android:id="@+id/tvPerfilNombres"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="4dp"
+
+                            android:text="—"
+
+                            android:textColor="@color/nigosha_text_title"
+
+                            android:textSize="15sp"
+
+                            android:textStyle="bold" />
+
+
+                        <!-- SEPARADOR -->
+
+                        <View
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_marginTop="14dp"
+                            android:layout_marginBottom="14dp"
+
+                            android:background="@color/nigosha_border" />
+
+
+                        <!-- APELLIDOS -->
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Apellidos"
+
+                            android:textColor="@color/nigosha_text_muted"
+
+                            android:textSize="11sp" />
+
+
+                        <TextView
+
+                            android:id="@+id/tvPerfilApellidos"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="4dp"
+
+                            android:text="—"
+
+                            android:textColor="@color/nigosha_text_title"
+
+                            android:textSize="15sp"
+
+                            android:textStyle="bold" />
+
+
+                        <!-- SEPARADOR -->
+
+                        <View
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_marginTop="14dp"
+                            android:layout_marginBottom="14dp"
+
+                            android:background="@color/nigosha_border" />
+
+
+                        <!-- CELULAR -->
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Celular"
+
+                            android:textColor="@color/nigosha_text_muted"
+
+                            android:textSize="11sp" />
+
+
+                        <TextView
+
+                            android:id="@+id/tvPerfilTelefono"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="4dp"
+
+                            android:text="—"
+
+                            android:textColor="@color/nigosha_text_title"
+
+                            android:textSize="15sp"
+
+                            android:textStyle="bold" />
+
+
+                        <!-- SEPARADOR -->
+
+                        <View
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_marginTop="14dp"
+                            android:layout_marginBottom="14dp"
+
+                            android:background="@color/nigosha_border" />
+
+
+                        <!-- CORREO -->
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Correo electrónico"
+
+                            android:textColor="@color/nigosha_text_muted"
+
+                            android:textSize="11sp" />
+
+
+                        <TextView
+
+                            android:id="@+id/tvPerfilCorreo"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="4dp"
+
+                            android:text="—"
+
+                            android:textColor="@color/nigosha_text_title"
+
+                            android:textSize="15sp"
+
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- ============================================= -->
+                <!-- CUENTA                                       -->
+                <!-- ============================================= -->
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="28dp"
+
+                    android:text="Cuenta"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    android:textSize="20sp"
+
+                    android:textStyle="bold" />
+
+
+                <!-- CERRAR SESIÓN -->
+
+                <com.google.android.material.button.MaterialButton
+
+                    android:id="@+id/btnCerrarSesion"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+
+                    android:layout_marginTop="14dp"
+
+                    android:text="Cerrar sesión"
+
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    android:textSize="14sp"
+
+                    android:letterSpacing="0.08"
+
+                    app:backgroundTint="@color/nigosha_surface"
+
+                    app:cornerRadius="14dp"
+
+                    app:strokeColor="@color/nigosha_border"
+
+                    app:strokeWidth="1dp" />
+
+
+                <!-- INFORMACIÓN DE SESIÓN -->
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="14dp"
+
+                    android:gravity="center"
+
+                    android:text="Tu sesión permanecerá activa hasta que cierres sesión."
+
+                    android:textColor="@color/nigosha_text_muted"
+
+                    android:textSize="11sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

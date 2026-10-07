@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="76dp"
+    android:height="76dp"
+    android:viewportWidth="76"
+    android:viewportHeight="76">
+
+    <!-- Fondo circular -->
+    <path
+        android:fillColor="#EDF4EF"
+        android:strokeColor="#DCE5DE"
+        android:strokeWidth="1"
+        android:pathData="M38,1 A37,37 0,1 1,37.99,1 Z" />
+
+    <!-- Cabeza -->
+    <path
+        android:fillColor="#1B4332"
+        android:pathData="M38,20
+                          C32.48,20 28,24.48 28,30
+                          C28,35.52 32.48,40 38,40
+                          C43.52,40 48,35.52 48,30
+                          C48,24.48 43.52,20 38,20 Z" />
+
+    <!-- Cuerpo -->
+    <path
+        android:fillColor="#1B4332"
+        android:pathData="M38,44
+                          C27.5,44 19,49.8 19,57
+                          L19,60
+                          L57,60
+                          L57,57
+                          C57,49.8 48.5,44 38,44 Z" />
+
+</vector>

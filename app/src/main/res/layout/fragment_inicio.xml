@@ -1,57 +1,859 @@
-<?xml version='1.0' encoding='utf-8'?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/nigosha_bg" android:fillViewport="true" android:clipToPadding="false">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:letterSpacing="0.18" android:text="NIGOSHA" android:textColor="@color/nigosha_gold" android:textSize="13sp" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="SALÓN &amp; SPA" android:letterSpacing="0.08" android:textColor="@color/nigosha_text_muted" android:textSize="11sp" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Un momento\npara ti." android:textColor="@color/nigosha_text_title" android:textSize="34sp" android:textStyle="bold" android:lineSpacingExtra="2dp" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Encuentra tu próximo servicio de belleza y bienestar. Nosotros te acompañamos." android:textColor="@color/nigosha_text_body" android:textSize="15sp" android:lineSpacingExtra="4dp" />
-        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:cardBackgroundColor="@color/nigosha_primary" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:strokeWidth="0dp">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:letterSpacing="0.10" android:text="TU PRÓXIMA VISITA" android:textColor="@color/nigosha_brand_caption" android:textSize="11sp" android:textStyle="bold" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Elige tu servicio.\nEncuentra tu horario." android:textColor="@color/white" android:textSize="25sp" android:textStyle="bold" android:lineSpacingExtra="3dp" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Consulta precios y duración, y selecciona una fecha con disponibilidad." android:textColor="@color/nigosha_brand_caption" android:textSize="14sp" android:lineSpacingExtra="4dp" />
-                <com.google.android.material.button.MaterialButton android:id="@+id/btnExplorarServicios" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:backgroundTint="@color/nigosha_surface" android:minHeight="56dp" android:text="Elegir servicio y reservar" android:textAllCaps="false" android:textColor="@color/nigosha_text_title" android:textSize="14sp" app:cornerRadius="14dp" />
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/nigosha_bg"
+
+    android:fillViewport="true"
+    android:clipToPadding="false">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="20dp">
+
+
+        <!-- ===================================================== -->
+        <!-- CABECERA                                              -->
+        <!-- ===================================================== -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical">
+
+
+            <!-- MARCA -->
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:letterSpacing="0.18"
+
+                    android:text="NIGOSHA"
+
+                    android:textColor="@color/nigosha_gold"
+
+                    android:textSize="13sp"
+
+                    android:textStyle="bold" />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="4dp"
+
+                    android:text="SALÓN &amp; SPA"
+
+                    android:letterSpacing="0.08"
+
+                    android:textColor="@color/nigosha_text_muted"
+
+                    android:textSize="11sp" />
+
+
             </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- ACCESO AL PERFIL                                  -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+
+                android:id="@+id/btnPerfilInicio"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:minWidth="72dp"
+                android:minHeight="72dp"
+
+                android:orientation="vertical"
+
+                android:gravity="center"
+
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+                android:clickable="true"
+                android:focusable="true">
+
+
+                <!-- AVATAR -->
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+
+                    app:cardBackgroundColor="@color/nigosha_surface_soft"
+
+                    app:cardCornerRadius="21dp"
+
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="@color/nigosha_border"
+
+                    app:strokeWidth="1dp">
+
+
+                    <ImageView
+
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+
+                        android:layout_gravity="center"
+
+                        android:src="@drawable/ic_perfil"
+
+                        android:contentDescription="Perfil" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- NOMBRE REAL DEL USUARIO -->
+
+                <TextView
+
+                    android:id="@+id/tvNombreUsuarioInicio"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="5dp"
+
+                    android:maxLines="1"
+
+                    android:ellipsize="end"
+
+                    android:text="Mi perfil"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    android:textSize="11sp"
+
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!-- ===================================================== -->
+        <!-- PRESENTACIÓN                                          -->
+        <!-- ===================================================== -->
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+
+            android:text="Un momento&#10;para ti."
+
+            android:textColor="@color/nigosha_text_title"
+
+            android:textSize="34sp"
+
+            android:textStyle="bold"
+
+            android:lineSpacingExtra="2dp" />
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:text="Encuentra tu próximo servicio de belleza y bienestar. Nosotros te acompañamos."
+
+            android:textColor="@color/nigosha_text_body"
+
+            android:textSize="15sp"
+
+            android:lineSpacingExtra="4dp" />
+
+
+        <!-- ===================================================== -->
+        <!-- PRÓXIMA VISITA / RESERVAR                             -->
+        <!-- ===================================================== -->
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+
+            app:cardBackgroundColor="@color/nigosha_primary"
+
+            app:cardCornerRadius="24dp"
+
+            app:cardElevation="0dp"
+
+            app:strokeWidth="0dp">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="24dp">
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:letterSpacing="0.10"
+
+                    android:text="TU PRÓXIMA VISITA"
+
+                    android:textColor="@color/nigosha_brand_caption"
+
+                    android:textSize="11sp"
+
+                    android:textStyle="bold" />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+
+                    android:text="Elige tu servicio.&#10;Encuentra tu horario."
+
+                    android:textColor="@color/white"
+
+                    android:textSize="25sp"
+
+                    android:textStyle="bold"
+
+                    android:lineSpacingExtra="3dp" />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+
+                    android:text="Consulta precios y duración, y selecciona una fecha con disponibilidad."
+
+                    android:textColor="@color/nigosha_brand_caption"
+
+                    android:textSize="14sp"
+
+                    android:lineSpacingExtra="4dp" />
+
+
+                <com.google.android.material.button.MaterialButton
+
+                    android:id="@+id/btnExplorarServicios"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="20dp"
+
+                    android:backgroundTint="@color/nigosha_surface"
+
+                    android:minHeight="56dp"
+
+                    android:text="Elegir servicio y reservar"
+
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    android:textSize="14sp"
+
+                    app:cornerRadius="14dp" />
+
+
+            </LinearLayout>
+
+
         </com.google.android.material.card.MaterialCardView>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="12dp" android:text="Tu próxima cita" android:textColor="@color/nigosha_text_title" android:textSize="21sp" android:textStyle="bold" />
+
+
+        <!-- ===================================================== -->
+        <!-- PRÓXIMA CITA                                          -->
+        <!-- ===================================================== -->
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Tu próxima cita"
+
+            android:textColor="@color/nigosha_text_title"
+
+            android:textSize="21sp"
+
+            android:textStyle="bold" />
+
+
         <include layout="@layout/view_loading" />
+
         <include layout="@layout/view_error" />
+
         <include layout="@layout/view_empty" />
-        <com.google.android.material.card.MaterialCardView android:id="@+id/cardProximaInicio" android:layout_width="match_parent" android:layout_height="wrap_content" android:visibility="gone" app:cardBackgroundColor="@color/nigosha_surface" app:cardCornerRadius="20dp" app:cardElevation="0dp" app:strokeWidth="1dp" app:strokeColor="@color/nigosha_border">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-                <TextView android:id="@+id/tvProximaServicio" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/nigosha_text_title" />
-                <TextView android:id="@+id/tvProximaFecha" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="15sp" android:textColor="@color/nigosha_text_body" />
-                <TextView android:id="@+id/tvProximaEstado" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="13sp" android:textColor="@color/nigosha_gold" />
-                <com.google.android.material.button.MaterialButton android:id="@+id/btnProximaInicio" style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:minHeight="52dp" android:text="Ver detalles de mi cita" android:textAllCaps="false" android:textColor="@color/nigosha_text_title" app:cornerRadius="14dp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:id="@+id/cardProximaInicio"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone"
+
+            app:cardBackgroundColor="@color/nigosha_surface"
+
+            app:cardCornerRadius="20dp"
+
+            app:cardElevation="0dp"
+
+            app:strokeWidth="1dp"
+
+            app:strokeColor="@color/nigosha_border">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="20dp">
+
+
+                <TextView
+
+                    android:id="@+id/tvProximaServicio"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="20sp"
+
+                    android:textStyle="bold"
+
+                    android:textColor="@color/nigosha_text_title" />
+
+
+                <TextView
+
+                    android:id="@+id/tvProximaFecha"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:textSize="15sp"
+
+                    android:textColor="@color/nigosha_text_body" />
+
+
+                <TextView
+
+                    android:id="@+id/tvProximaEstado"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:textSize="13sp"
+
+                    android:textColor="@color/nigosha_gold" />
+
+
+                <com.google.android.material.button.MaterialButton
+
+                    android:id="@+id/btnProximaInicio"
+
+                    style="?attr/materialButtonOutlinedStyle"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+
+                    android:minHeight="52dp"
+
+                    android:text="Ver detalles de mi cita"
+
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    app:cornerRadius="14dp" />
+
+
             </LinearLayout>
+
+
         </com.google.android.material.card.MaterialCardView>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="Todo para tu visita" android:textColor="@color/nigosha_text_title" android:textSize="21sp" android:textStyle="bold" />
-        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" app:cardBackgroundColor="@color/nigosha_surface" app:cardCornerRadius="20dp" app:cardElevation="0dp" app:strokeColor="@color/nigosha_border" app:strokeWidth="1dp">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="MIS CITAS" android:letterSpacing="0.08" android:textColor="@color/nigosha_gold" android:textSize="11sp" android:textStyle="bold" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Tu agenda, a la mano" android:textColor="@color/nigosha_text_title" android:textSize="20sp" android:textStyle="bold" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Revisa tus próximas citas, el estado de tus solicitudes y los detalles de cada visita." android:textColor="@color/nigosha_text_body" android:textSize="14sp" android:lineSpacingExtra="3dp" />
-                <com.google.android.material.button.MaterialButton android:id="@+id/btnConsultarCitas" style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:minHeight="52dp" android:text="Consultar mis citas" android:textAllCaps="false" android:textColor="@color/nigosha_text_title" app:cornerRadius="14dp" app:strokeColor="@color/nigosha_border" />
+
+
+        <!-- ===================================================== -->
+        <!-- TODO PARA TU VISITA                                   -->
+        <!-- ===================================================== -->
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="Todo para tu visita"
+
+            android:textColor="@color/nigosha_text_title"
+
+            android:textSize="21sp"
+
+            android:textStyle="bold" />
+
+
+        <!-- ===================================================== -->
+        <!-- MIS CITAS                                             -->
+        <!-- ===================================================== -->
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+
+            app:cardBackgroundColor="@color/nigosha_surface"
+
+            app:cardCornerRadius="20dp"
+
+            app:cardElevation="0dp"
+
+            app:strokeColor="@color/nigosha_border"
+
+            app:strokeWidth="1dp">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="20dp">
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="MIS CITAS"
+
+                    android:letterSpacing="0.08"
+
+                    android:textColor="@color/nigosha_gold"
+
+                    android:textSize="11sp"
+
+                    android:textStyle="bold" />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+
+                    android:text="Tu agenda, a la mano"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    android:textSize="20sp"
+
+                    android:textStyle="bold" />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:text="Revisa tus próximas citas, el estado de tus solicitudes y los detalles de cada visita."
+
+                    android:textColor="@color/nigosha_text_body"
+
+                    android:textSize="14sp"
+
+                    android:lineSpacingExtra="3dp" />
+
+
+                <com.google.android.material.button.MaterialButton
+
+                    android:id="@+id/btnConsultarCitas"
+
+                    style="?attr/materialButtonOutlinedStyle"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+
+                    android:minHeight="52dp"
+
+                    android:text="Consultar mis citas"
+
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    app:cornerRadius="14dp"
+
+                    app:strokeColor="@color/nigosha_border" />
+
+
             </LinearLayout>
+
+
         </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" app:cardBackgroundColor="@color/nigosha_surface_soft" app:cardCornerRadius="20dp" app:cardElevation="0dp" app:strokeWidth="0dp">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="TE ESPERAMOS" android:letterSpacing="0.08" android:textColor="@color/nigosha_gold" android:textSize="11sp" android:textStyle="bold" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Un espacio para cuidarte" android:textColor="@color/nigosha_text_title" android:textSize="20sp" android:textStyle="bold" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Av. San Felipe 272 · Comas" android:textColor="@color/nigosha_text_body" android:textSize="14sp" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Encuentra cómo llegar o comunícate con nosotros por WhatsApp." android:textColor="@color/nigosha_text_muted" android:textSize="14sp" android:lineSpacingExtra="3dp" />
-                <com.google.android.material.button.MaterialButton android:id="@+id/btnConocerSalon" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:backgroundTint="@color/nigosha_primary" android:minHeight="52dp" android:text="Ubicación y contacto" android:textAllCaps="false" android:textColor="@color/white" app:cornerRadius="14dp" />
+
+
+        <!-- ===================================================== -->
+        <!-- SALÓN                                                 -->
+        <!-- ===================================================== -->
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+
+            app:cardBackgroundColor="@color/nigosha_surface_soft"
+
+            app:cardCornerRadius="20dp"
+
+            app:cardElevation="0dp"
+
+            app:strokeWidth="0dp">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="20dp">
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="TE ESPERAMOS"
+
+                    android:letterSpacing="0.08"
+
+                    android:textColor="@color/nigosha_gold"
+
+                    android:textSize="11sp"
+
+                    android:textStyle="bold" />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+
+                    android:text="Un espacio para cuidarte"
+
+                    android:textColor="@color/nigosha_text_title"
+
+                    android:textSize="20sp"
+
+                    android:textStyle="bold" />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:text="Av. San Felipe 272 · Comas"
+
+                    android:textColor="@color/nigosha_text_body"
+
+                    android:textSize="14sp" />
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="6dp"
+
+                    android:text="Encuentra cómo llegar o comunícate con nosotros por WhatsApp."
+
+                    android:textColor="@color/nigosha_text_muted"
+
+                    android:textSize="14sp"
+
+                    android:lineSpacingExtra="3dp" />
+
+
+                <com.google.android.material.button.MaterialButton
+
+                    android:id="@+id/btnConocerSalon"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+
+                    android:backgroundTint="@color/nigosha_primary"
+
+                    android:minHeight="52dp"
+
+                    android:text="Ubicación y contacto"
+
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/white"
+
+                    app:cornerRadius="14dp" />
+
+
             </LinearLayout>
+
+
         </com.google.android.material.card.MaterialCardView>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="Reserva en tres pasos" android:textColor="@color/nigosha_text_title" android:textSize="21sp" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="01   Encuentra tu servicio" android:textColor="@color/nigosha_text_title" android:textSize="15sp" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Consulta su precio y duración en el catálogo." android:textColor="@color/nigosha_text_muted" android:textSize="13sp" />
-        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp" android:background="@color/nigosha_border" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="02   Selecciona fecha y hora" android:textColor="@color/nigosha_text_title" android:textSize="15sp" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Elige entre los horarios disponibles." android:textColor="@color/nigosha_text_muted" android:textSize="13sp" />
-        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp" android:background="@color/nigosha_border" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="03   Revisa tu solicitud" android:textColor="@color/nigosha_text_title" android:textSize="15sp" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Comprueba tus datos y consulta el estado en Mis citas." android:textColor="@color/nigosha_text_muted" android:textSize="13sp" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:layout_marginBottom="8dp" android:gravity="center" android:text="Nigosha · Belleza y bienestar" android:textColor="@color/nigosha_text_muted" android:textSize="12sp" />
+
+
+        <!-- ===================================================== -->
+        <!-- PASOS DE RESERVA                                      -->
+        <!-- ===================================================== -->
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="Reserva en tres pasos"
+
+            android:textColor="@color/nigosha_text_title"
+
+            android:textSize="21sp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+
+            android:text="01   Encuentra tu servicio"
+
+            android:textColor="@color/nigosha_text_title"
+
+            android:textSize="15sp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:text="Consulta su precio y duración en el catálogo."
+
+            android:textColor="@color/nigosha_text_muted"
+
+            android:textSize="13sp" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_marginTop="14dp"
+
+            android:background="@color/nigosha_border" />
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+
+            android:text="02   Selecciona fecha y hora"
+
+            android:textColor="@color/nigosha_text_title"
+
+            android:textSize="15sp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:text="Elige entre los horarios disponibles."
+
+            android:textColor="@color/nigosha_text_muted"
+
+            android:textSize="13sp" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_marginTop="14dp"
+
+            android:background="@color/nigosha_border" />
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+
+            android:text="03   Revisa tu solicitud"
+
+            android:textColor="@color/nigosha_text_title"
+
+            android:textSize="15sp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:text="Comprueba tus datos y consulta el estado en Mis citas."
+
+            android:textColor="@color/nigosha_text_muted"
+
+            android:textSize="13sp" />
+
+
+        <!-- ===================================================== -->
+        <!-- PIE                                                   -->
+        <!-- ===================================================== -->
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+
+            android:gravity="center"
+
+            android:text="Nigosha · Belleza y bienestar"
+
+            android:textColor="@color/nigosha_text_muted"
+
+            android:textSize="12sp" />
+
+
     </LinearLayout>
+
+
 </ScrollView>

@@ -1,37 +1,272 @@
-<?xml version='1.0' encoding='utf-8'?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_cliente" app:startDestination="@id/inicioFragment">
-    <fragment android:id="@+id/inicioFragment" android:name="pe.uch.nigosha.feature.inicio.InicioFragment" android:label="Inicio" />
-    <navigation android:id="@+id/catalogoFragment" app:startDestination="@id/catalogoListaFragment">
-        <fragment android:id="@+id/catalogoListaFragment" android:name="pe.uch.nigosha.feature.catalogo.CatalogoFragment" android:label="Servicios">
-            <action android:id="@+id/action_catalogo_detalle" app:destination="@id/detalleServicioFragment" app:launchSingleTop="true" />
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/nav_cliente"
+
+    app:startDestination="@id/inicioFragment">
+
+
+    <!-- ========================================================= -->
+    <!-- INICIO                                                    -->
+    <!-- ========================================================= -->
+
+    <fragment
+
+        android:id="@+id/inicioFragment"
+
+        android:name="pe.uch.nigosha.feature.cliente.inicio.InicioFragment"
+
+        android:label="Inicio">
+
+        <action
+
+            android:id="@+id/action_inicio_perfil"
+
+            app:destination="@id/perfilFragment"
+
+            app:launchSingleTop="true" />
+
+    </fragment>
+
+
+    <!-- ========================================================= -->
+    <!-- PERFIL DEL CLIENTE                                        -->
+    <!-- ========================================================= -->
+
+    <fragment
+
+        android:id="@+id/perfilFragment"
+
+        android:name="pe.uch.nigosha.feature.cliente.perfil.PerfilFragment"
+
+        android:label="Mi perfil" />
+
+
+    <!-- ========================================================= -->
+    <!-- CATÁLOGO / SERVICIOS / RESERVA                            -->
+    <!-- ========================================================= -->
+
+    <navigation
+
+        android:id="@+id/catalogoFragment"
+
+        app:startDestination="@id/catalogoListaFragment">
+
+
+        <fragment
+
+            android:id="@+id/catalogoListaFragment"
+
+            android:name="pe.uch.nigosha.feature.cliente.catalogo.CatalogoFragment"
+
+            android:label="Servicios">
+
+
+            <action
+
+                android:id="@+id/action_catalogo_detalle"
+
+                app:destination="@id/detalleServicioFragment"
+
+                app:launchSingleTop="true" />
+
         </fragment>
-        <fragment android:id="@+id/detalleServicioFragment" android:name="pe.uch.nigosha.feature.servicio.DetalleServicioFragment" android:label="Detalle del servicio">
-            <argument android:name="servicioId" app:argType="string" />
-            <action android:id="@+id/action_detalle_reserva" app:destination="@id/reservaFragment" app:launchSingleTop="true" />
+
+
+        <fragment
+
+            android:id="@+id/detalleServicioFragment"
+
+            android:name="pe.uch.nigosha.feature.cliente.servicio.DetalleServicioFragment"
+
+            android:label="Detalle del servicio">
+
+
+            <argument
+
+                android:name="servicioId"
+
+                app:argType="string" />
+
+
+            <action
+
+                android:id="@+id/action_detalle_reserva"
+
+                app:destination="@id/reservaFragment"
+
+                app:launchSingleTop="true" />
+
         </fragment>
-        <fragment android:id="@+id/reservaFragment" android:name="pe.uch.nigosha.feature.reserva.ReservaFragment" android:label="Organiza tu visita">
-            <argument android:name="servicioId" app:argType="string" />
-            <action android:id="@+id/action_reserva_resumen" app:destination="@id/resumenReservaFragment" app:launchSingleTop="true" />
+
+
+        <fragment
+
+            android:id="@+id/reservaFragment"
+
+            android:name="pe.uch.nigosha.feature.cliente.reserva.ReservaFragment"
+
+            android:label="Organiza tu visita">
+
+
+            <argument
+
+                android:name="servicioId"
+
+                app:argType="string" />
+
+
+            <action
+
+                android:id="@+id/action_reserva_resumen"
+
+                app:destination="@id/resumenReservaFragment"
+
+                app:launchSingleTop="true" />
+
         </fragment>
-        <fragment android:id="@+id/resumenReservaFragment" android:name="pe.uch.nigosha.feature.reserva.ResumenReservaFragment" android:label="Revisa tu solicitud">
-            <argument android:name="servicioId" app:argType="string" />
-            <argument android:name="nombreServicio" app:argType="string" />
-            <argument android:name="duracion" app:argType="integer" />
-            <argument android:name="inicio" app:argType="long" />
-            <argument android:name="cliente" app:argType="string" />
-            <argument android:name="telefono" app:argType="string" />
-            <action android:id="@+id/action_resumen_resultado" app:destination="@id/resultadoReservaFragment" app:popUpTo="@id/reservaFragment" app:popUpToInclusive="true" app:launchSingleTop="true" />
+
+
+        <fragment
+
+            android:id="@+id/resumenReservaFragment"
+
+            android:name="pe.uch.nigosha.feature.cliente.reserva.ResumenReservaFragment"
+
+            android:label="Revisa tu solicitud">
+
+
+            <argument
+                android:name="servicioId"
+                app:argType="string" />
+
+            <argument
+                android:name="nombreServicio"
+                app:argType="string" />
+
+            <argument
+                android:name="duracion"
+                app:argType="integer" />
+
+            <argument
+                android:name="inicio"
+                app:argType="long" />
+
+            <argument
+                android:name="cliente"
+                app:argType="string" />
+
+            <argument
+                android:name="telefono"
+                app:argType="string" />
+
+
+            <action
+
+                android:id="@+id/action_resumen_resultado"
+
+                app:destination="@id/resultadoReservaFragment"
+
+                app:popUpTo="@id/reservaFragment"
+
+                app:popUpToInclusive="true"
+
+                app:launchSingleTop="true" />
+
         </fragment>
-        <fragment android:id="@+id/resultadoReservaFragment" android:name="pe.uch.nigosha.feature.reserva.ResultadoReservaFragment" android:label="Solicitud registrada">
-            <argument android:name="citaId" app:argType="string" />
+
+
+        <fragment
+
+            android:id="@+id/resultadoReservaFragment"
+
+            android:name="pe.uch.nigosha.feature.cliente.reserva.ResultadoReservaFragment"
+
+            android:label="Solicitud registrada">
+
+
+            <argument
+
+                android:name="citaId"
+
+                app:argType="string" />
+
         </fragment>
+
     </navigation>
-    <fragment android:id="@+id/misCitasFragment" android:name="pe.uch.nigosha.feature.citas.MisCitasFragment" android:label="Mis citas" />
-    <fragment android:id="@+id/salonFragment" android:name="pe.uch.nigosha.feature.salon.SalonFragment" android:label="El salón" />
-    <fragment android:id="@+id/detalleCitaFragment" android:name="pe.uch.nigosha.feature.citas.DetalleCitaFragment" android:label="Detalle de cita">
-        <argument android:name="citaId" app:argType="string" />
+
+
+    <!-- ========================================================= -->
+    <!-- MIS CITAS                                                 -->
+    <!-- ========================================================= -->
+
+    <fragment
+
+        android:id="@+id/misCitasFragment"
+
+        android:name="pe.uch.nigosha.feature.cliente.citas.MisCitasFragment"
+
+        android:label="Mis citas" />
+
+
+    <!-- ========================================================= -->
+    <!-- EL SALÓN                                                  -->
+    <!-- ========================================================= -->
+
+    <fragment
+
+        android:id="@+id/salonFragment"
+
+        android:name="pe.uch.nigosha.feature.cliente.salon.SalonFragment"
+
+        android:label="El salón" />
+
+
+    <!-- ========================================================= -->
+    <!-- DETALLE DE CITA                                           -->
+    <!-- ========================================================= -->
+
+    <fragment
+
+        android:id="@+id/detalleCitaFragment"
+
+        android:name="pe.uch.nigosha.feature.cliente.citas.DetalleCitaFragment"
+
+        android:label="Detalle de cita">
+
+
+        <argument
+
+            android:name="citaId"
+
+            app:argType="string" />
+
     </fragment>
-    <fragment android:id="@+id/pagoFragment" android:name="pe.uch.nigosha.feature.pago.PagoFragment" android:label="Tu adelanto">
-        <argument android:name="citaId" app:argType="string" />
+
+
+    <!-- ========================================================= -->
+    <!-- PAGO                                                      -->
+    <!-- ========================================================= -->
+
+    <fragment
+
+        android:id="@+id/pagoFragment"
+
+        android:name="pe.uch.nigosha.feature.cliente.pago.PagoFragment"
+
+        android:label="Tu adelanto">
+
+
+        <argument
+
+            android:name="citaId"
+
+            app:argType="string" />
+
     </fragment>
+
+
 </navigation>

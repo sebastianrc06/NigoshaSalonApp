@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import pe.uch.nigosha.feature.cliente.ClienteActivity;
+import pe.uch.nigosha.feature.auth.splash.SplashActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,11 +13,10 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    Intent intent =
-            new Intent(
-                    this,
-                    ClienteActivity.class
-            );
+    Intent intent = new Intent(
+            this,
+            SplashActivity.class
+    );
 
     startActivity(intent);
 

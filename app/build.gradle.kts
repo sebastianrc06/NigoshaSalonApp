@@ -5,15 +5,26 @@ plugins {
     alias(libs.plugins.google.gms.google.services)
 }
 
-// Lee la clave desde local.properties.
-val mapsApiKey = providers.fileContents(
-    rootProject.layout.projectDirectory.file("local.properties")
-).asText.map { contenido ->
-    val propiedades = Properties()
-    propiedades.load(contenido.reader())
-    propiedades.getProperty("MAPS_API_KEY", "").trim()
-}.getOrElse("")
+val localProperties = Properties().apply {
+    val archivo = rootProject.layout.projectDirectory.file("local.properties").asFile
+
+    if (archivo.exists()) {
+        archivo.inputStream().use {
+            load(it)
+        }
+    }
+}
+
+val mapsApiKey = localProperties
+    .getProperty("MAPS_API_KEY", "")
+    .trim()
+
+val apisPeruToken = localProperties
+    .getProperty("APISPERU_TOKEN", "")
+    .trim()
+
 android {
+
     namespace = "pe.uch.nigosha"
 
     compileSdk {
@@ -21,20 +32,35 @@ android {
     }
 
     defaultConfig {
+
         applicationId = "pe.uch.nigosha"
+
         minSdk = 24
         targetSdk = 37
+
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner =
+            "androidx.test.runner.AndroidJUnitRunner"
 
-        // Disponible como ${MAPS_API_KEY} en AndroidManifest.xml.
         manifestPlaceholders["MAPS_API_KEY"] = mapsApiKey
+
+        buildConfigField(
+            "String",
+            "APISPERU_TOKEN",
+            "\"${apisPeruToken.replace("\"", "\\\"")}\""
+        )
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
+
         release {
+
             optimization {
                 enable = false
             }
@@ -42,12 +68,14 @@ android {
     }
 
     compileOptions {
+
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
 dependencies {
+
     // Android
     implementation(libs.activity.ktx)
     implementation(libs.appcompat)
@@ -72,6 +100,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.9.4")
     implementation("androidx.lifecycle:lifecycle-livedata:2.9.4")
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.9.4")
+
+    // Retrofit - APIs Perú
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
     // Testing
     testImplementation(libs.junit)

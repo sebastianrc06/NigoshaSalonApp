@@ -29,11 +29,41 @@
 
         tools:targetApi="31">
 
+        <!-- GOOGLE MAPS -->
+
         <meta-data
 
             android:name="com.google.android.geo.API_KEY"
 
             android:value="${MAPS_API_KEY}" />
+
+
+        <!-- AUTH -->
+
+        <activity
+
+            android:name=".feature.auth.splash.SplashActivity"
+
+            android:exported="false" />
+
+        <activity
+
+            android:name=".feature.auth.login.LoginActivity"
+
+            android:exported="false"
+
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+
+            android:name=".feature.auth.registro.RegistroActivity"
+
+            android:exported="false"
+
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <!-- CLIENTE -->
 
         <activity
 
@@ -45,11 +75,14 @@
 
         <activity
 
-            android:name=".feature.pago.PagoActivity"
+            android:name=".feature.cliente.pago.PagoActivity"
 
             android:exported="false"
 
             android:windowSoftInputMode="adjustResize" />
+
+
+        <!-- ENTRADA PRINCIPAL -->
 
         <activity
 

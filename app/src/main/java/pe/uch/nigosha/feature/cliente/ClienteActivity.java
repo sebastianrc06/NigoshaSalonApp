@@ -200,7 +200,8 @@ public class ClienteActivity extends AppCompatActivity {
                                     id == R.id.reservaFragment
                                             || id == R.id.resumenReservaFragment
                                             || id == R.id.resultadoReservaFragment
-                                            || id == R.id.pagoFragment;
+                                            || id == R.id.pagoFragment
+                                            || id == R.id.perfilFragment;
 
                             bottomNavigation.setVisibility(
                                     flujo
